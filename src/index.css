@@ -1,0 +1,155 @@
+:root {
+  --backround-clr: #f1f5f8;
+  --primary--clr: #2caeba;
+  --backround-seconday-clr: #dae2ec;
+  --text--secondary-clr: #617d98;
+  --gray-clr: #617d98;
+  --heading-font-size: 2.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  letter-spacing: 0.1rem;
+}
+body {
+  background-color: var(--backround-clr);
+}
+
+.container {
+  width: 80vw;
+  margin: auto;
+}
+@media screen and (max-width: 787px) {
+  .container {
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    width: 95vw;
+  }
+}
+
+main h1 {
+  text-align: center;
+  margin: 3rem 0;
+  position: relative;
+  font-size: var(--heading-font-size);
+}
+
+main h1.title::after {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 0.3rem;
+  background-color: var(--primary--clr);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -11px;
+}
+
+.tabs-content {
+  margin: 3rem 0;
+}
+@media screen and (min-width: 1024px) {
+  .tabs-content {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.tabs-content .info {
+}
+.tabs-content h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .tabs-content h4 {
+    text-align: left;
+  }
+}
+
+.tabs-content .company {
+  background: var(--backround-seconday-clr);
+  width: fit-content;
+  padding: 0.2rem 0.4rem;
+  color: var(--text--secondary-clr);
+  margin: 1.2rem auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .tabs-content .company {
+    margin: 1.2rem 0;
+  }
+}
+.tabs-content .dates {
+  color: var(--gray-clr);
+  font-size: 1.2rem;
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .tabs-content .dates {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+}
+
+.duties .duty-content {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.duties .duty-content .duty-icon {
+  font-size: 1.5rem;
+  color: var(--primary--clr);
+}
+/* Tabs Buttons */
+.tabs-content .btn-containers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .tabs-content .btn-containers {
+    flex-direction: column;
+    margin-right: 3rem;
+  }
+}
+
+.tabs-content .btn-containers button {
+  font-size: 1rem;
+  padding: 0.5rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.tabs-content .btn-containers button:hover,
+.active {
+  color: var(--primary--clr);
+  box-shadow: 0px 3px var(--primary--clr);
+}
+
+@media screen and (min-width: 1024px) {
+  .tabs-content .btn-containers button {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+  }
+  .tabs-content .btn-containers button:hover,
+  .active {
+    box-shadow: -3px 0px var(--primary--clr);
+  }
+}
